@@ -159,6 +159,13 @@ $POSTFSDATA && cp -af $INSTALLER/common/post-fs-data.sh $MODPATH/post-fs-data.sh
 # service mode scripts
 $LATESTARTSERVICE && cp -af $INSTALLER/common/service.sh $MODPATH/service.sh
 
+ui_print "- Migrating media_profiles.xml "
+if [ -f "/system/etc/media_profiles.xml" ]; then
+mkdir -p $MODPATH/system/etc/
+cp -af /system/etc/media_profiles.xml $MODPATH/system/etc/media_profiles.xml
+sed -i '0,/<\/CamcorderProfiles>/ s/<\/CamcorderProfiles>/<EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30"><Video codec="h264" bitRate="42000000" width="1280" height="720" frameRate="120" \/><Audio codec="aac" bitRate="96000" sampleRate="48000" channels="1" \/><\/EncoderProfile><EncoderProfile quality="highspeedhigh" fileFormat="mp4" duration="30"><Video codec="h264" bitRate="42000000" width="1920" height="1080" frameRate="60" \/><Audio codec="aac" bitRate="96000" sampleRate="48000" channels="1" \/><\/EncoderProfile><EncoderProfile quality="highspeed720p" fileFormat="mp4" duration="30"><Video codec="h264" bitRate="42000000" width="1280" height="720" frameRate="120" \/><Audio codec="aac" bitRate="96000" sampleRate="48000" channels="1" \/><\/EncoderProfile><EncoderProfile quality="highspeed1080p" fileFormat="mp4" duration="30"><Video codec="h264" bitRate="42000000" width="1920" height="1080" frameRate="60" \/><Audio codec="aac" bitRate="96000" sampleRate="48000" channels="1" \/><\/EncoderProfile><\/CamcorderProfiles>/' $MODPATH/system/etc/media_profiles.xml
+fi
+
 ui_print "- Setting permissions"
 set_permissions
 

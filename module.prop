@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
+id=gcam-patch
+name=Google Camera Patch
+version=1.0
 versionCode=1
-author=topjohnwu
-description=A short description
+author=simonsmh
+description=Fix slomo & 60fps not working
 template=4
