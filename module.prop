@@ -3,5 +3,5 @@ name=Google Camera Patch
 version=1.0
 versionCode=1
 author=simonsmh
-description=Fix slomo & 60fps not working
-template=4
+description=Fix slomo & 60fps not working.
+template=1400
