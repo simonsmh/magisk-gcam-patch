@@ -4,4 +4,4 @@ version=1.2
 versionCode=3
 author=simonsmh
 description=Fix slomo & 60fps not working on GCam.
-template=1400
+minMagisk=1500

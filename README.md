@@ -8,7 +8,7 @@ This module could works on most of the devices. Actually this module is mostly f
 
 * You should use latest Magisk Manager to install this module. If you meet any problem under installation from Magisk Manager, please try to install it from recovery.
 * Recent fixes:
-Magisk v14 Template 1400 compatabilities
+Magisk v15 Template 1500 compatabilities
 
 #### Credit & Support
 
