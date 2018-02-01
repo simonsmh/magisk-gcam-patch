@@ -1,5 +1,7 @@
 #### Magisk GCam Patch
 
+**##NO LONGER MAINTAINED##**
+
 Fix slow motion & 60fps not working on Google camera.
 
 This module could work on most of the devices. Actually, this module is mostly for non-nexus devices, which is considered not supported by Google Camera. By default, other devices can't even open slomo and they will expect ANR immediately. This module fixes some missing media profiles and makes slomo working again. The basic logic is simple, Nexus devices won't need such kind of module.
